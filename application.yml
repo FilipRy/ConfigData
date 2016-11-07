@@ -1,22 +1,35 @@
 ---
-
+# Items that apply to ALL profiles:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8084/eureka
+      defaultZone: http://localhost:8084/eureka/,http://localhost:8085/eureka/,http://localhost:8086/eureka/,http://localhost:8087/eureka/
 
 
 ---
 spring:
+  profiles: sentence
+server:
+  port: 8082
+words: noneWord
+
+---
+spring:
   profiles: subject
+server:
+  port: 0
 words: I,You,He,She,It
 
 ---
 spring:
   profiles: verb
+server:
+  port: 0
 words: ran,knew,had,saw,bought
 
 ---
 spring:
   profiles: noun
+server:
+  port: 0
 words: boat,book,vote,seat,backpack,partition,groundhog,computer  
